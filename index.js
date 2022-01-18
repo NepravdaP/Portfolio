@@ -15,18 +15,27 @@ const toggleMenu = () => {
     });
   }
 };
+const portfolioBtns = document.querySelector(".portfolio-btns");
+const portfolioImg = document.querySelectorAll(".portfolio-img");
+const changeImage = (event) => {
+  if (event.target.dataset.season === "winter") {
+    portfolioImg.forEach(
+      (img, index) => (img.src = `./assets/winter/${index + 1}.jpg`)
+    );
+  } else if (event.target.dataset.season === "spring") {
+    portfolioImg.forEach(
+      (img, index) => (img.src = `./assets/spring/${index + 1}.jpg`)
+    );
+  } else if (event.target.dataset.season === "summer") {
+    portfolioImg.forEach(
+      (img, index) => (img.src = `./assets/summer/${index + 1}.jpg`)
+    );
+  } else if (event.target.dataset.season === "autumn") {
+    portfolioImg.forEach(
+      (img, index) => (img.src = `./assets/autumn/${index + 1}.jpg`)
+    );
+  }
+};
+portfolioBtns.addEventListener("click", changeImage);
 hamburgerMenu.addEventListener("click", toggleMenu);
 hamburger.addEventListener("click", toggleMenu);
-console.log(
-  "Score: 100 / 100",
-  "\n",
-  "- [x] Верстка валидная (10)",
-  "\n",
-  "- [x] Вёрстка семантическая (20)",
-  "\n",
-  "- [x]Вёрстка соответствует макету (48)",
-  "\n",
-  "- [x] Требования к css (12)",
-  "\n",
-  "- [x] Интерактивность, реализуемая через css (20)"
-);
