@@ -5,39 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/logo.svg" />
     <title>Portfolio</title>
   </head>
   <body>
-    <header class="header-container">
-      <img src="./assets/logo.svg" alt="logo" class="logo" />
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#skills" class="nav-link">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a href="#video" class="nav-link">Video</a>
-          </li>
-          <li class="nav-item">
-            <a href="#price" class="nav-link">Price</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contacts" class="nav-link">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="lang-switch">
-        <a href="" class="lang-link">en</a>
-        <span>/</span>
-        <a href="" class="lang-link">ru</a>
+    <div class="nav-menu">
+      <div class="nav-menu-items">
+        <a href="#skills" class="nav-menu-item">Skills</a>
       </div>
-      <div class="nav-hamburger">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
+      <div class="nav-menu-item">
+        <a href="#portfolio" class="nav-menu-item">Portfolio</a>
+      </div>
+      <div class="nav-menu-item">
+        <a href="#video" class="nav-menu-item">Video</a>
+      </div>
+      <div class="nav-menu-item">
+        <a href="#price" class="nav-menu-item">Price</a>
+      </div>
+      <div class="nav-menu-item">
+        <a href="#contacts" class="nav-menu-item">Contact</a>
+      </div>
+    </div>
+    <header>
+      <div class="header-container">
+        <img src="./assets/logo.svg" alt="logo" class="logo" />
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#video" class="nav-link">Video</a>
+            </li>
+            <li class="nav-item">
+              <a href="#price" class="nav-link">Price</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="lang-switch">
+          <a href="" class="lang-link">en</a>
+          <span>/</span>
+          <a href="" class="lang-link">ru</a>
+        </div>
+        <div class="nav-hamburger">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
       </div>
     </header>
     <main class="main-container">
@@ -223,26 +243,6 @@
       </div>
     </footer>
 
-    <script>
-      const hamburger = document.querySelector(".nav-hamburger");
-
-      function toggleMenu() {
-        hamburger.classList.toggle("open");
-      }
-      hamburger.addEventListener("click", toggleMenu);
-      console.log(
-        "Score: 100 / 100",
-        "\n",
-        "- [x] Верстка валидная (10)",
-        "\n",
-        "- [x] Вёрстка семантическая (20)",
-        "\n",
-        "- [x]Вёрстка соответствует макету (48)",
-        "\n",
-        "- [x] Требования к css (12)",
-        "\n",
-        "- [x] Интерактивность, реализуемая через css (20)"
-      );
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
