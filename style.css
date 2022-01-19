@@ -554,7 +554,10 @@ nav {
   color: #bdae82;
   transition: 0.3s;
 }
-
+.active {
+  background-color: #bdae82;
+  color: #000000;
+}
 @media (max-width: 1440px) {
   .skills-items {
     justify-content: space-around;
