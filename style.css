@@ -718,6 +718,13 @@ nav {
   .skills-items {
     height: auto;
   }
+  .skill-item {
+    height: 250px;
+  }
+  .skill-text {
+    padding-bottom: 15px;
+    height: auto;
+  }
   .portfolio-items {
     min-width: 100%;
     overflow: hidden;
@@ -727,6 +734,9 @@ nav {
   }
   .price-item {
     width: 98%;
+  }
+  .contact-heading {
+    text-align: center;
   }
   .contact-input {
     width: 90%;
