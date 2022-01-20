@@ -5,8 +5,10 @@ const links = document.querySelectorAll(".nav-menu-item");
 const i18Node = document.querySelectorAll("[data-i18]");
 const enLang = document.querySelector("#en-lang");
 const ruLang = document.querySelector("#ru-lang");
+const elementsInvert = document.querySelectorAll("[data-theme");
+const themeLink = document.querySelector(".theme-switch");
+const themeIcon = document.querySelector(".theme-icon");
 
-console.log(i18Node);
 const toggleMenu = () => {
   hamburger.classList.toggle("open");
   hamburgerMenu.classList.toggle("open");
@@ -72,13 +74,23 @@ const getTranslate = (lang) => {
     el.innerHTML = i18Obj[lang][transEl];
   });
 };
-console.log(i18Obj.ru);
+const themeSwitch = () => {
+  [...elementsInvert].map((el) => {
+    el.classList.toggle("light-theme");
+  });
+  if ([...hamburger.classList].includes("light-theme")) {
+    themeIcon.src = "./assets/dark-icon.svg";
+  } else {
+    themeIcon.src = "./assets/light-icon.svg";
+  }
+};
 enLang.addEventListener("click", () => {
   getTranslate("en");
 });
 ruLang.addEventListener("click", () => {
   getTranslate("ru");
 });
+themeLink.addEventListener("click", themeSwitch);
 portfolioBtns.addEventListener("click", changeImage);
 hamburgerMenu.addEventListener("click", toggleMenu);
 hamburger.addEventListener("click", toggleMenu);
