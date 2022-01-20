@@ -120,9 +120,7 @@ nav {
   text-decoration: none;
   color: #ffffff;
 }
-.lang-link:nth-child(1) {
-  color: #bdae82;
-}
+
 .hero-block {
   max-width: 500px;
   padding-top: 160px;
@@ -553,6 +551,10 @@ nav {
 .nav-menu-item:hover {
   color: #bdae82;
   transition: 0.3s;
+}
+.lang-active {
+  color: #bdae82;
+  transition: 0.8s;
 }
 .active {
   background-color: #bdae82;

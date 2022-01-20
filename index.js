@@ -60,14 +60,16 @@ const changeImage = (event) => {
   }
 };
 const getTranslate = (lang) => {
-  console.log(lang);
-  // window.location.reload();
+  if (lang === "ru") {
+    enLang.classList.remove("lang-active");
+    ruLang.classList.add("lang-active");
+  } else if (lang === "en") {
+    ruLang.classList.remove("lang-active");
+    enLang.classList.add("lang-active");
+  }
   [...i18Node].map((el) => {
-    console.log("true");
     const transEl = el.dataset.i18;
-    console.log(transEl);
-
-    el.textContent = i18Obj[lang].transEl;
+    el.innerHTML = i18Obj[lang][transEl];
   });
 };
 console.log(i18Obj.ru);
