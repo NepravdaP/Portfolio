@@ -61,16 +61,22 @@ const changeImage = (event) => {
 };
 const getTranslate = (lang) => {
   console.log(lang);
+  // window.location.reload();
   [...i18Node].map((el) => {
+    console.log("true");
     const transEl = el.dataset.i18;
     console.log(transEl);
 
-    el.textContent = i18Obj.lang.transEl;
+    el.textContent = i18Obj[lang].transEl;
   });
 };
-
-enLang.addEventListener("click", getTranslate("en"));
-ruLang.addEventListener("click", getTranslate("ru"));
+console.log(i18Obj.ru);
+enLang.addEventListener("click", () => {
+  getTranslate("en");
+});
+ruLang.addEventListener("click", () => {
+  getTranslate("ru");
+});
 portfolioBtns.addEventListener("click", changeImage);
 hamburgerMenu.addEventListener("click", toggleMenu);
 hamburger.addEventListener("click", toggleMenu);
