@@ -609,7 +609,6 @@ nav {
     line-height: 24px;
   }
   .section-title {
-    width: 70%;
     margin-top: 80px;
     max-width: 400px;
   }
@@ -726,7 +725,7 @@ nav {
     padding-right: 10px;
   }
   .section-title {
-    max-width: 95vw;
+    width: 75%;
   }
   .skills-items {
     height: auto;
